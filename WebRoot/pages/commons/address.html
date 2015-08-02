@@ -1,0 +1,59 @@
+<!-- 废弃 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>优易洗</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+  <div id="content" style="margin:20px 30px;">
+<h4 style="color:blue;">服务类型</h4>
+  <input type="radio" name="type" value="单洗外面 20元" checked="checked" />单洗外面 20元<br>
+<input type="radio" name="type" value="内外洗 30元" />内外洗 30元
+<br>
+<h4 style="color:blue;">划痕及损伤声明</h4>
+<input type="radio" name="declare" value="我知道车身有损伤，我对此并不在意，具体位置说不清" />我知道车身有损伤，我对此并不在意，具体位置说不清<hr>
+<h5>本人车辆以下位置有：</h5>
+<input type="radio" name="declare" value="划痕" />划痕
+<input type="radio" name="declare" value="损伤" />损伤
+<hr>
+<table>
+<tr>
+<td><input type="radio" name="position" value="前保险杠" />前保险杠</td>
+<td><input type="radio" name="position" value="后保险杠" />后保险杠</td></tr><tr>
+<td><input type="radio" name="position" value="左前门" />左前门</td>
+<td><input type="radio" name="position" value="右前门" />右前门</td></tr><tr>
+<td><input type="radio" name="position" value="左后门" />左后门</td>
+<td><input type="radio" name="position" value="右后门" />右后门</td></tr><tr>
+<td><input type="radio" name="position" value="发动机盖" />发动机盖</td>
+<td><input type="radio" name="position" value="后备箱门" />后备箱门</td></tr><tr>
+<td><input type="radio" name="position" value="左前轮上部" />左前轮上部</td>
+<td><input type="radio" name="position" value="右前轮上部" />右前轮上部</td></tr><tr>
+<td><input type="radio" name="position" value="左后轮上部" />左后轮上部</td>
+<td><input type="radio" name="position" value="右后轮上部" />右后轮上部</td></tr><tr>
+<td><input type="radio" name="position" value="左后视镜" />左后视镜</td>
+<td><input type="radio" name="position" value="右后视镜" />右后视镜</td>
+</tr></table>
+</div> <!--/#content -->
+
+    <script src="../dist/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript">
+    //拦截用户请求
+         var xmobile=localStorage.getItem("xiche_mobile");
+         if(xmobile==null||xmobile=='null'||xmobile=='');
+            // location.href="../login.html";
+    </script>
+    <script src="../dist/js/layer.m.js"></script>
+    <script type="text/javascript" src="../util.js"></script>
+    <script type="text/javascript" src="123.js"></script>
+
+</body>
+</html>

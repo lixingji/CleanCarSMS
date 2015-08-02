@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 资源访问控制 -->
+	<constant name="struts.action.extension" value="" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.devMode" value="false" />
+	
+	<!-- 处理微信消息 -->
+	<package name="weixin" extends="struts-default">
+		<action name="wechatMessage.action" class="com.cleancarSMS.controller.InterfaceConfirmAction">
+			
+		</action>
+	</package>
+	
+	<!-- 发送短信 -->
+	<package name="msg" extends="json-default">
+		<action name="getMsgCode.action" class="com.cleancarSMS.controller.CleanCarSMSAction"
+			method="getSMSCode">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		<action name="sendMsgCode.action" class="com.cleancarSMS.controller.CleanCarSMSAction"
+			method="sendSMSCode">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		<!-- 发短信通知负责人 -->
+		<action name="sendSMStoManager.action" class="com.cleancarSMS.controller.CleanCarSMSAction"
+			method="sendSMStoManager">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- 服务地址 -->
+	<package name="serveAddress" extends="json-default">
+		<action name="addAddress.action" class="com.cleancarSMS.controller.ServeAddressAction"
+			method="addAddress">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		<action name="deleteAddress.action" class="com.cleancarSMS.controller.ServeAddressAction"
+			method="deleteAddress">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		<action name="getAddressList.action" class="com.cleancarSMS.controller.ServeAddressAction"
+			method="getAddressList">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">serveAddressList</param>
+			</result>
+		</action>
+		<action name="getAddressListByMId.action" class="com.cleancarSMS.controller.ServeAddressAction"
+			method="getAddressListByMId">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">serveAddressList</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- 处理订单消息 -->
+	<package name="order" extends="json-default">
+		<!-- 查询个人所有订单 -->
+		<action name="loadAllOrders.action" class="com.cleancarSMS.controller.OrderAction" method="loadAllOrdersByPhoneNumber">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+		 	 	<param name="root">orders</param>
+			</result>
+		</action>
+		
+		<!-- 下单 -->
+		<action name="addOrder.action" class="com.cleancarSMS.controller.OrderAction" method="addOrder">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+			 	<param name="root">id</param>   
+			</result>
+		</action>
+		
+		<!-- 支付订单 -->
+		<action name="payOrder.action" class="com.cleancarSMS.controller.OrderAction" method="payOrder">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+			 	<param name="root">id</param>   
+			</result>
+		</action>
+		
+		<!-- 取消订单 -->
+		<action name="cancelOrder.action" class="com.cleancarSMS.controller.OrderAction" method="cancelOrder">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+			 	<param name="root">id</param>   
+			</result>
+		</action>
+		
+		<!-- 查询支付金额 -->
+		<action name="queryMoney.action" class="com.cleancarSMS.controller.OrderAction" method="queryMoney">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+			 	<param name="root">money</param>   
+			</result>
+		</action>
+		
+		<!-- 查询订单 -->
+		<action name="queryDetail.action" class="com.cleancarSMS.controller.OrderAction" method="queryDetail">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+			 	<param name="root">order</param>   
+			</result>
+		</action>
+		
+		<!-- 更新订单 -->
+		<action name="updateOrder.action" class="com.cleancarSMS.controller.OrderAction" method="updateOrder">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+			 	<param name="root">id</param>   
+			</result>
+		</action>
+		<!-- 更新为已支付订单 -->
+		<action name="updateOrderState.action" class="com.cleancarSMS.controller.OrderAction" method="updateOrderState">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+			 	<param name="root">state</param>   
+			</result>
+		</action>
+	</package>
+	
+	<!-- 管理员权限操作 -->
+	<package name="admin" extends="json-default">
+		<action name="adminLogin.action" class="com.cleancarSMS.controller.AdminAction"
+			method="adminLogin">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		<action name="updateMoney.action" class="com.cleancarSMS.controller.AdminAction"
+			method="updateMoney">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		<action name="updateInOutMoney.action" class="com.cleancarSMS.controller.AdminAction"
+			method="updateInOutMoney">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		<action name="updatePsw.action" class="com.cleancarSMS.controller.AdminAction"
+			method="updatePsw">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- 区域负责人操作 -->
+	<package name="areaManager" extends="json-default">
+		<action name="addManager.action" class="com.cleancarSMS.controller.AreaManagerAction"
+			method="addManager">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		<!--  删除区域负责人  -->
+		<action name="deleteManager.action" class="com.cleancarSMS.controller.AreaManagerAction"
+			method="deleteManager">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		
+		<action name="updateManager.action" class="com.cleancarSMS.controller.AreaManagerAction"
+			method="updateManager">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">status</param>
+			</result>
+		</action>
+		<action name="loadManagerList.action" class="com.cleancarSMS.controller.AreaManagerAction"
+			method="loadManagerList">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+				<param name="root">amList</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- 获取支付相关信息 -->
+	<package name="payInfo" extends="json-default">
+		<action name="getBrandWCPayRequest.action" class="com.cleancarSMS.controller.wechatPayAction" method="getBrandWCPayRequest">
+			<result type="json">
+				<param name="excludeNullProperties">false</param>
+			 	<param name="root">brandWCPayRequestParameters</param>  
+			</result>
+			<result type="json" name="error">
+				<param name="excludeNullProperties">false</param>
+			 	<param name="root">brandWCPayRequestParameters</param>  
+			</result>
+		</action>
+	</package>
+</struts>  

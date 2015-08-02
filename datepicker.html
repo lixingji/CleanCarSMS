@@ -1,0 +1,93 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>jquery手机日期控件</title>
+</head>
+
+<body><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="http://pos.baidu.com/wh/o.htm?ltr=http%3A%2F%2Fwww.17sucai.com%2Fpins%2F7750.html&amp;cf=u" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+
+<style type="text/css">
+/* reset */
+*{margin:0;padding:0;list-style-type:none;}
+a{blr:expression(this.onFocus=this.blur())}/*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+:focus{outline:0;}
+label{cursor:pointer;}
+img{vertical-align:middle;}
+table{empty-cells:show;border-collapse:collapse;border-spacing:0;}
+h1{font-size:16px;}h2,h3,h4{font-size:14px;}h5,h6{font-size:12px;}
+abbr,acronym{border:0;font-variant:normal}
+address,caption,cite,code,dfn,em,th,var,optgroup{font-style:normal;font-weight:normal}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
+input,button,textarea,select{*font-size:100%}
+a,img{border:0;}
+a,a:visited{color:#5e5e5e; text-decoration:none;}
+a:hover{color:#4183C4;text-decoration:underline;}
+.clear{display:block;overflow:hidden;clear:both;height:0;line-height:0;font-size:0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-table;}/* Hides from IE-mac \*/
+*html .clearfix{height:1%;}
+.clearfix{display:block;}/* End hide from IE-mac */
+*+html .clearfix{min-height:1%;}
+body{font:12px/180% Arial,Lucida,Verdana,"宋体",Helvetica,sans-serif;color:#333;background:#fff;}
+/* shortcut */
+.shortcut{height:32px;line-height:32px;font-size:12px;background:#eee;text-transform:uppercase;box-shadow:1px 0px 2px rgba(0,0,0,0.2);border-bottom:1px solid #DDDDDD;}
+.shortcut h1{font-size:14px;font-family:"微软雅黑","宋体";}
+.shortcut a,.shortcut h1{padding:0px 10px;letter-spacing:1px;color:#333;text-shadow:0px 1px 1px #fff;display:block;float:left;width:360px;height:32px;overflow:hidden;}
+.shortcut a:hover{background:#fff;}
+.shortcut span.right{float:right;display:inline-block;width:468px;height:15px;overflow:hidden;margin:8px 5px 0 0;}
+.shortcut .close{
+	background:url(/static/images/close-demo.gif) no-repeat 0 0;width:20px;height:20px;line-height:99em;overflow:hidden;display:inline-block;margin:6px 10px 0 10px;float:right;padding:0;
+	-webkit-transition:all .3s ease-out 0s;
+	-moz-transition:all .3s ease-out 0s;
+	-ms-transition:all .3s ease-out 0s;
+	-o-transition:all .3s ease-out 0s;
+	transition:all .3s ease-out 0s;
+}
+.shortcut .close:hover{background:url(/static/images/close-demo.gif) no-repeat 0 -20px}
+.shortcut .close:active{background:url(/static/images/close-demo.gif) no-repeat 0 -40px}
+</style>
+
+<script type="text/javascript">
+/*bd120*270，创建于2013-10-13*/
+var cpro_id = "u1386621";
+</script>
+<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/f.js"></script><div id="BAIDU_DUP_wrapper_u1386621_0"></div><div style="padding: 0px; display: block; visibility: visible; border: medium none; background: none repeat scroll 0% 0% transparent; float: none; overflow: hidden; position: fixed; z-index: 2147483646; width: 130px; height: 300px; right: 7px; top: 0px;" id="cproIframe2002holder"><div id="cproIframe2002CloseBtnWrap" style="position: absolute; top: 275px; left: 0px; cursor: pointer; width: 130px; height: 28px; z-index: 100; opacity: 0; background-color: rgb(153, 153, 153);"></div><div id="cproIframe2002CloseBtn" style="position: absolute; width: 130px; height: 20px; top: 280px; left: 0px; cursor: pointer; background-color: rgb(153, 153, 153); color: rgb(255, 255, 255); font-size: 12px; font-family: 微软雅黑; text-align: center; line-height: 20px;">关闭</div><div style="width: 120px; height: 270px; overflow: hidden; padding: 4px; border: 1px solid rgb(172, 172, 172);"><div style="display:none">-</div><iframe width="120" height="270" frameborder="0" align="center,center" allowtransparency="true" scrolling="no" marginheight="0" marginwidth="0" src="http://pos.baidu.com/acom?adn=1&amp;at=6&amp;aurl=http%3A%2F%2Fwww.17sucai.com&amp;cad=0&amp;ccd=24&amp;ccw=10000&amp;cec=UTF-8&amp;cfv=17&amp;ch=0&amp;col=zh-CN&amp;conOP=0&amp;cpa=1&amp;ct=1&amp;dai=1&amp;dis=0&amp;fa=1&amp;flw=1&amp;ls=3&amp;ltr=http%3A%2F%2Fwww.17sucai.com%2Fpins%2F7750.html&amp;ltu=http%3A%2F%2Fwww.17sucai.com%2Fpins%2Fdemoshow%2F7750&amp;lunum=6&amp;n=97005019_cpr&amp;pcs=1366x631&amp;pis=10000x10000&amp;ps=0x0&amp;psr=1366x768&amp;pss=1366x631&amp;pt=1&amp;qn=e383df639a3e1421&amp;rad=&amp;rsi0=120&amp;rsi1=270&amp;rsi5=4&amp;rsi6=-1&amp;rsi7=0&amp;rss0=&amp;rss1=&amp;rss2=&amp;rss3=&amp;rss4=&amp;rss5=&amp;rss6=&amp;rss7=&amp;scale=&amp;skin=&amp;td_id=1386621&amp;tn=template_float_all_normal&amp;tpr=1427366917175&amp;ts=1&amp;ww=0&amp;xuanting=0&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dc=2&amp;di=u1386621&amp;distp=2002&amp;tt=1427366917146.32.113.117&amp;adclass=1&amp;conW=120&amp;conH=270" id="cproIframe2002"></iframe></div></div><div style="padding: 0px; display: block; visibility: visible; border: medium none; background: none repeat scroll 0% 0% transparent; float: none; overflow: hidden; position: fixed; z-index: 2147483646; width: 130px; height: 300px; left: 7px; top: 0px;" id="cproIframe2001holder"><div id="cproIframe2001CloseBtnWrap" style="position: absolute; top: 275px; left: 0px; cursor: pointer; width: 130px; height: 28px; z-index: 100; opacity: 0; background-color: rgb(153, 153, 153);"></div><div id="cproIframe2001CloseBtn" style="position: absolute; width: 130px; height: 20px; top: 280px; left: 0px; cursor: pointer; background-color: rgb(153, 153, 153); color: rgb(255, 255, 255); font-size: 12px; font-family: 微软雅黑; text-align: center; line-height: 20px;">关闭</div><div style="width: 120px; height: 270px; overflow: hidden; padding: 4px; border: 1px solid rgb(172, 172, 172);"><div style="display:none">-</div><iframe width="120" height="270" frameborder="0" align="center,center" allowtransparency="true" scrolling="no" marginheight="0" marginwidth="0" src="http://pos.baidu.com/acom?adn=1&amp;at=6&amp;aurl=http%3A%2F%2Fwww.17sucai.com&amp;cad=0&amp;ccd=24&amp;ccw=10000&amp;cec=UTF-8&amp;cfv=17&amp;ch=0&amp;col=zh-CN&amp;conOP=0&amp;cpa=1&amp;ct=1&amp;dai=1&amp;dis=0&amp;fa=1&amp;flw=1&amp;ls=3&amp;ltr=http%3A%2F%2Fwww.17sucai.com%2Fpins%2F7750.html&amp;ltu=http%3A%2F%2Fwww.17sucai.com%2Fpins%2Fdemoshow%2F7750&amp;lunum=6&amp;n=97005019_cpr&amp;pcs=1366x631&amp;pis=10000x10000&amp;ps=0x0&amp;psr=1366x768&amp;pss=1366x631&amp;pt=1&amp;qn=e383df639a3e1421&amp;rad=&amp;rsi0=120&amp;rsi1=270&amp;rsi5=4&amp;rsi6=-1&amp;rsi7=0&amp;rss0=&amp;rss1=&amp;rss2=&amp;rss3=&amp;rss4=&amp;rss5=&amp;rss6=&amp;rss7=&amp;scale=&amp;skin=&amp;td_id=1386621&amp;tn=template_float_all_normal&amp;tpr=1427366917175&amp;ts=1&amp;ww=0&amp;xuanting=0&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dc=2&amp;di=u1386621&amp;distp=2001&amp;tt=1427366917146.32.113.119&amp;adclass=1&amp;conW=120&amp;conH=270" id="cproIframe2001"></iframe></div></div><script src="http://pos.baidu.com/acom?di=u1386621&amp;dcb=BAIDU_DUP2_define&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dbv=0&amp;dci=0&amp;dri=0&amp;dis=0&amp;dai=1&amp;dds=&amp;drs=1&amp;dvi=1425363012&amp;ltu=http%3A%2F%2Fwww.17sucai.com%2Fpins%2Fdemoshow%2F7750&amp;liu=&amp;ltr=http%3A%2F%2Fwww.17sucai.com%2Fpins%2F7750.html&amp;lcr=&amp;ps=0x0&amp;psr=1366x768&amp;par=1366x728&amp;pcs=1366x631&amp;pss=1366x631&amp;pis=-1x-1&amp;cfv=17&amp;ccd=24&amp;chi=1&amp;cja=false&amp;cpl=23&amp;cmi=35&amp;cce=true&amp;col=zh-CN&amp;cec=UTF-8&amp;cdo=-1&amp;tsr=18&amp;tlm=1427366917&amp;tcn=1427366917&amp;tpr=1427366917175&amp;dpt=none&amp;coa=&amp;baidu_id=" charset="utf-8"></script>
+
+<div class="shortcut">
+	<h1><a href="http://www.17sucai.com/pins/7750.html">jquery手机日期控件_html5手机网页手机日期选择器代码</a></h1>
+	<a class="close" href="http://www.17sucai.com/preview/223988/2014-11-06/20141107/index.html" title="查看原网页">关闭</a>
+	<span class="right">
+		<script type="text/javascript">
+		/*新468*15*/
+		var cpro_id = "u1425128";
+		</script>
+		<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script><div id="BAIDU_DUP_wrapper_u1425128_0"><iframe width="468" height="15" frameborder="0" align="center,center" allowtransparency="true" scrolling="no" marginheight="0" marginwidth="0" src="http://pos.baidu.com/acom?adn=0&amp;at=128&amp;aurl=http%3A%2F%2Fwww.17sucai.com&amp;cad=0&amp;ccd=24&amp;cec=UTF-8&amp;cfv=17&amp;ch=0&amp;col=zh-CN&amp;conOP=0&amp;cpa=1&amp;dai=2&amp;dis=0&amp;layout_filter=tabcloud%2Cimage&amp;ltr=http%3A%2F%2Fwww.17sucai.com%2Fpins%2F7750.html&amp;ltu=http%3A%2F%2Fwww.17sucai.com%2Fpins%2Fdemoshow%2F7750&amp;lu_161=0&amp;lunum=6&amp;n=97005019_cpr&amp;pcs=1366x631&amp;pis=10000x10000&amp;ps=8x853&amp;psr=1366x768&amp;pss=1366x631&amp;qn=2911ccd7d0873186&amp;rad=&amp;rsi0=468&amp;rsi1=15&amp;rsi5=4&amp;rss0=%23FFFFFF&amp;rss1=%23FFFFFF&amp;rss2=%230000ff&amp;rss3=&amp;rss4=&amp;rss5=&amp;rss6=%23e10900&amp;rss7=&amp;scale=&amp;skin=&amp;td_id=1425128&amp;tn=tlink_default_468_15&amp;tpr=1427366917175&amp;ts=1&amp;version=2.0&amp;xuanting=0&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dc=2&amp;di=u1425128&amp;tt=1427366917146.140.198.199" id="cproIframe_u1425128_2"></iframe></div><script src="http://pos.baidu.com/acom?di=u1425128&amp;dcb=BAIDU_DUP2_define&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dbv=0&amp;dci=0&amp;dri=0&amp;dis=0&amp;dai=2&amp;dds=&amp;drs=1&amp;dvi=1425363012&amp;ltu=http%3A%2F%2Fwww.17sucai.com%2Fpins%2Fdemoshow%2F7750&amp;liu=&amp;ltr=http%3A%2F%2Fwww.17sucai.com%2Fpins%2F7750.html&amp;lcr=&amp;ps=8x853&amp;psr=1366x768&amp;par=1366x728&amp;pcs=1366x631&amp;pss=1366x631&amp;pis=-1x-1&amp;cfv=17&amp;ccd=24&amp;chi=1&amp;cja=false&amp;cpl=23&amp;cmi=35&amp;cce=true&amp;col=zh-CN&amp;cec=UTF-8&amp;cdo=-1&amp;tsr=129&amp;tlm=1427366917&amp;tcn=1427366917&amp;tpr=1427366917175&amp;dpt=none&amp;coa=&amp;baidu_id=" charset="utf-8"></script>
+	</span>
+</div><!-- shortcut end -->
+
+<script src="http://www.17sucai.com/static/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var iframeHeight = function () {
+	var _height = $(window).height() - 34;
+		$('#content').height(_height);
+	}
+	window.onresize = iframeHeight;
+	$(function () {
+		iframeHeight();
+	});
+	
+});
+</script>
+
+<div style="overflow:hidden;" id="container">
+	<iframe width="100%" height="100%" frameborder="0" src="http://www.17sucai.com/preview/223988/2014-11-06/20141107/index.html" id="content" border="0" style="height: 170px;"></iframe>
+</div>
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F382f81c966395258f239157654081890' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript" src=" http://hm.baidu.com/h.js?382f81c966395258f239157654081890"></script>
+
+
+</body></html>
